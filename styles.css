@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --light-one: #D8F3DC;
+    --light-two: #B7E4C7;
+    --light-three: #95D5B2;
+    --nuetral-one: #74C69D;
+    --nuetral-two: #52B788;
+    --dark-one: #40916C;
+    --dark-two: #2D6A4F;
+    --dark-three: #1B4332;
+    --dark-four: #081C15;
+    --red: #ef233c;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', serif;
+    background-color: var(--light-one);
+}
+
+/* Nav / Heading */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    min-height: 8vh;
+    top: 0%;
+    width: 100%;
+}
+
+h1 {
+    padding-left: 2em;
+}
+
+.new-book-btn {
+    padding-right: 2em;
+}
+
+#new-book {
+    background-color: var(--dark-two);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.popup {
+    position: absolute;
+
+}
+
+/* form popup - hidden by default */
+.popup-container-hidden {
+    display: none;
+    position: fixed;
+  }
+
+/* form popup when not hidden */
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10000;
+    width: 350px;
+    border-radius: 5px;
+    padding: 2em 1em;
+    /* z-index: 1000; */
+    background-color: #fff;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.form-header {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+.form-header h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-container input[type="text"],
+.popup-container input[type="number"],
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.container input[type="text"]:hover,
+.container input[type="number"]:hover,
+select:hover {
+    background-color: #ddd;
+    outline: none;
+  
+}
+
+.submit {
+    background-color: var(--dark-two);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+label, .has-read {
+    margin-top: 1em;
+}
+
+
+.library {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-top: 20vh;
+    padding: 0 5em;
+}
+
+#library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 2em;
+}
+
+/* Book Card */
+
+.book-card {
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 5px;
+    padding-bottom: 1em;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    background-color: var(--dark-two);
+    padding: 0 2em;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.author, .pages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3em;
+    margin-left: 1em;
+}
+
+.book-card-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-card-button {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    opacity: 0.8;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.has-read {
+    background-color: var(--dark-two); 
+    color: white;
+}
+
+.not-read {
+    background-color: var(--red); 
+    color: white;
+}
+
+/* achieve read toggle by changing class on click using DOM */
+
+
+

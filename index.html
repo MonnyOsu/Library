@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class='heading'>Library</h1>
+        <div class="new-book-btn">
+            <button id='new-book'>New Book</button>
+        </div>
+    </header>
+
+    <section class="library">
+        <div id="library-container">
+
+        </div>
+    </section>
+
+    <!-- Form element  -->
+
+
+    <section class="popup">
+        <div class="popup-container-hidden" id="popup-container">
+            <div class="form-header">
+                <h2 class='new-book-heading'>New Book</h2>
+                <button class="close-button" id="new-book-close-button">X</button>
+            </div>
+
+            <form id="form" action='/' method='GET'>
+                <label for="title">Title:</label>
+                <input type="text" placeholder="Book title" name="title" id="title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" placeholder="Author" name="author" id="author" required>
+
+                <label for="pages">Pages:</label>
+                <input type="number" placeholder="No. of pages" name="pages" id="pages" required>
+
+                <label for="has-read">Have you read it?</label>
+                <select name="has-read" id="has-read">
+                    <option value="read">Read</option>
+                    <option value="not-read">Not Read</option>
+                </select>
+                <input type="submit" class='submit' id='submit-btn'>
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
